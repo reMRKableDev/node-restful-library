@@ -12,15 +12,10 @@ const {
 
 app.use(express.json());
 
-// GET (READ all books)
 app.get("/", ReadAll);
-// GET (READ 1 specific book)
 app.get("/:id", ReadOne);
-// POST (CREATE)
 app.post("/", Create);
-// PUT (UPDATE 1 book)
 app.put("/:id", Update);
-// DELETE (DELETE)
 app.delete("/:id", Delete);
 
 app.listen(port, () => console.log(`Listening to port: ${port}`));
